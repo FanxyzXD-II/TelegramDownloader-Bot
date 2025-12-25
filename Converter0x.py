@@ -14,7 +14,7 @@ from telegram.ext import (
 from telegram.request import HTTPXRequest
 
 # ================= CONFIG =================
-BOT_TOKEN = "8536220244:AAHYvxf1LsQfOKJalB7yqS1qSBLmjzstJ8w"
+BOT_TOKEN = "token_bot"
 DOWNLOAD_DIR = "downloads"
 USER_DB = "users.json"
 
@@ -200,4 +200,5 @@ def main():
     app.run_polling()
 
 if __name__ == "__main__":
+
     main()
