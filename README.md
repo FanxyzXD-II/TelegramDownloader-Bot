@@ -7,93 +7,188 @@ Project ini cocok dijalankan di Termux, VPS, Linux server, maupun environment Py
 
 ---
 
-✨ Fitur Utama
+📥 Cara Instalasi & Menjalankan Bot
 
-📥 Download file dari Telegram
-
-🎥 Mendukung media (video, audio, dokumen)
-
-👥 Manajemen user sederhana
-
-📂 Penyimpanan hasil download otomatis
-
-⚡ Ringan & stabil
-
-🧩 Mudah dikembangkan
-
+Panduan berikut menjelaskan instalasi lengkap Telegram Downloader Bot di berbagai environment.
 
 
 ---
 
-🧰 Teknologi yang Digunakan
+📱 Instalasi di Termux (Android)
 
-Python 3
+1️⃣ Update Termux
 
-Telegram Bot API
+pkg update && pkg upgrade
 
-Requests / Async Library (sesuai implementasi)
+2️⃣ Install dependency dasar
 
-Termux / Linux / VPS
+pkg install git python ffmpeg nodejs -y
 
+Cek versi:
 
-
----
-
-📂 Struktur Repository
-
-Struktur utama project:
-
-TelegramDownloader-Bot/
-├── Converter0x.py      # File utama bot
-├── downloads/          # Folder hasil download
-├── proofs/             # File pendukung / bukti
-├── users.json          # Database user
-├── .gitignore          # File ignore git
-└── README.md           # Dokumentasi
+python --version
+node --version
+ffmpeg -version
 
 
 ---
 
-🚀 Instalasi & Menjalankan Bot
-
-1️⃣ Clone Repository
+3️⃣ Clone repository bot
 
 git clone https://github.com/FanxyzXD-II/TelegramDownloader-Bot.git
 cd TelegramDownloader-Bot
 
-2️⃣ Install Python & Dependency
 
-Pastikan Python 3 sudah terinstall:
+---
 
-python --version
+4️⃣ Install Python library yang dibutuhkan
 
-Jika ada dependency:
+pip install -U yt-dlp
+pip install python-telegram-bot
+
+Jika ingin lebih rapi, buat requirements.txt:
+
+yt-dlp
+python-telegram-bot
+requests
+
+Lalu install:
 
 pip install -r requirements.txt
 
-(Jika belum ada requirements.txt, install library yang dibutuhkan secara manual)
+
+---
+
+5️⃣ Konfigurasi Bot Token
+
+Edit file utama:
+
+nano Converter0x.py
+
+Masukkan BOT TOKEN Telegram kamu:
+
+TOKEN = "ISI_TOKEN_BOT_KAMU"
+
+⚠️ Jangan upload token ke GitHub.
 
 
 ---
 
-3️⃣ Konfigurasi Bot
-
-Masukkan BOT TOKEN Telegram ke dalam file Converter0x.py atau file konfigurasi yang digunakan.
-
-⚠️ Disarankan untuk memindahkan token ke environment variable agar lebih aman.
-
-
----
-
-4️⃣ Jalankan Bot
+6️⃣ Jalankan bot
 
 python Converter0x.py
 
-Bot akan langsung aktif dan siap menerima perintah.
+Bot akan langsung aktif dan siap digunakan.
 
 
 ---
 
+💻 Instalasi di VPS / Linux (Ubuntu/Debian)
+
+1️⃣ Update server
+
+sudo apt update && sudo apt upgrade -y
+
+2️⃣ Install dependency
+
+sudo apt install git python3 python3-pip ffmpeg nodejs -y
+
+
+---
+
+3️⃣ Clone repository
+
+git clone https://github.com/FanxyzXD-II/TelegramDownloader-Bot.git
+cd TelegramDownloader-Bot
+
+
+---
+
+4️⃣ Install Python dependency
+
+pip3 install -U yt-dlp
+pip3 install python-telegram-bot
+
+
+---
+
+5️⃣ Jalankan bot
+
+python3 Converter0x.py
+
+
+---
+
+🖥️ Instalasi di Windows
+
+1️⃣ Install software pendukung
+
+Python 3.x → https://www.python.org
+
+Git → https://git-scm.com
+
+FFmpeg → https://ffmpeg.org
+
+
+Pastikan semua sudah masuk PATH.
+
+
+---
+
+2️⃣ Clone repository
+
+git clone https://github.com/FanxyzXD-II/TelegramDownloader-Bot.git
+cd TelegramDownloader-Bot
+
+
+---
+
+3️⃣ Install dependency
+
+pip install -U yt-dlp
+pip install python-telegram-bot
+
+
+---
+
+4️⃣ Jalankan bot
+
+python Converter0x.py
+
+
+---
+
+🔁 Menjalankan Bot 24 Jam (Opsional)
+
+Termux
+
+nohup python Converter0x.py &
+
+VPS (screen)
+
+screen -S tgdownloader
+python3 Converter0x.py
+
+Keluar screen: CTRL + A + D
+
+
+---
+
+⚠️ Catatan Penting
+
+❌ Jangan upload downloads/ ke GitHub
+
+❌ Jangan upload BOT TOKEN
+
+✅ Gunakan Python versi terbaru
+
+✅ FFmpeg wajib untuk download video
+
+
+
+---
+
+⭐ Jika bot ini bermanfaat, jangan lupa beri Star di GitHub ⭐
 📥 Cara Penggunaan
 
 1. Start bot di Telegram
