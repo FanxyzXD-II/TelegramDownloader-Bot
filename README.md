@@ -36,6 +36,7 @@ ffmpeg -version
 3️⃣ Clone repository bot
 
 git clone https://github.com/FanxyzXD-II/TelegramDownloader-Bot.git
+
 cd TelegramDownloader-Bot
 
 
@@ -99,6 +100,7 @@ sudo apt install git python3 python3-pip ffmpeg nodejs -y
 3️⃣ Clone repository
 
 git clone https://github.com/FanxyzXD-II/TelegramDownloader-Bot.git
+
 cd TelegramDownloader-Bot
 
 
